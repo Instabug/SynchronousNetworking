@@ -14,7 +14,7 @@ anka clone "$ANKA_IMAGE_NAME" "$job_image_name"
 trap cleanup EXIT
 
 echo "+++ Building app in $job_image_name"
-anka run "$job_image_name" echo hello
+anka run "$job_image_name" swift build -v
 
 echo "--- Uploading build artifacts"
 buildkite-agent artifact upload "build/Build/Products/**/*"
