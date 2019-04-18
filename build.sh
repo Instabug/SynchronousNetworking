@@ -16,7 +16,7 @@ trap cleanup EXIT
 echo "+++ Building app in $job_image_name"
 anka run "$job_image_name" pwd
 anka run "$job_image_name" ls -laht /private/var/tmp/ankafs.0/
-anka run "$job_image_name" swift build -v
+anka run "$job_image_name" swift build -v --build-path /Users/anka/temp
 
 echo "--- Uploading build artifacts"
 buildkite-agent artifact upload "build/Build/Products/**/*"
