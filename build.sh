@@ -2,7 +2,7 @@
 set -euo pipefail
 
 job_image_name="${ANKA_IMAGE_NAME}-${BUILDKITE_JOB_ID}"
-artifacts_directory="/data/build"
+artifacts_directory="/data"
 
 mkdir $artifacts_directory
 
