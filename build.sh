@@ -14,6 +14,8 @@ anka clone "$ANKA_IMAGE_NAME" "$job_image_name"
 trap cleanup EXIT
 
 echo "+++ Building app in $job_image_name"
+anka run "$job_image_name" pwd
+anka run "$job_image_name" ls -laht /private/var/tmp/ankafs.0/
 anka run "$job_image_name" swift build -v
 
 echo "--- Uploading build artifacts"
