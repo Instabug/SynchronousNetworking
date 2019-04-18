@@ -4,6 +4,8 @@ set -euo pipefail
 job_image_name="${ANKA_IMAGE_NAME}-${BUILDKITE_JOB_ID}"
 artifacts_directory="/Users/anka/artifacts"
 
+mkdir $artifacts_directory
+
 cleanup() {
   echo "--- Cleaning up images"
   anka delete --yes "$job_image_name"
