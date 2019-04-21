@@ -3,9 +3,9 @@ set -euo pipefail
 
 job_image_name="${ANKA_IMAGE_NAME}-${BUILDKITE_JOB_ID}"
 artifacts_directory="/data"
-whoami
+# whoami
 
-sudo mkdir $artifacts_directory
+# sudo mkdir $artifacts_directory
 
 cleanup() {
   echo "--- Cleaning up images"
