@@ -22,6 +22,7 @@ echo "+++ Building app in $job_image_name"
 # anka run "$job_image_name" ls -laht /private/var/tmp/ankafs.0/
 # anka run -v $PWD:/Users/anka/workspace "$job_image_name" swift build
 anka run "$job_image_name" mkdir temp-bk
+anka run "$job_image_name" ls
 # -v --build-path "$artifacts_directory"
 
 echo "--- Uploading build artifacts"
